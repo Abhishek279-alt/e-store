@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | E-store</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- Favicon Include -->
+  <link rel="icon" type="image/x-icon" href="./favicon_io/favicon.ico">
+</head>
+<!-- Dynamically added Header and Footer files -->
+<script>
+  $(function () {
+    $("header").load("./include/header.html");
+    $("footer").load("./include/footer.html")
+  });
+</script>
+
+<body class="primary-color">
+  <header></header>
+
+  <main class="container my-5">
+    <div class="row" id="cart-container">
+
+      <!-- Add to Cart -->
+
+      <div class="col-6 my-2">
+        <div class="card" style="width: 30rem;">
+          <div class="card-header h4 text-center bg-dark text-light">
+            Add items to cart
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div>
+                <img class="rounded cart-img" src="./images/no-img.png" alt="Image">
+              </div>
+              <div>
+                <div class="h5 cart-title font-weight-bold my-2">Sample Product</div>
+                <div class="h6 font-weight-bold my-2"><span>&#8377;</span><span class="cart-price">999.99</span></div>
+                <div class="btn-group my-3" role="group">
+                  <button type="button" class="btn-sm btn-dark">-</button>
+                  <button type="button" class="btn-sm btn-light" disabled>0</button>
+                  <button type="button" class="btn-sm btn-dark">+</button>
+                </div>
+                <button class="btn-sm btn-warning ml-4"><i class="fa-regular fa-trash-can"></i></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+
+      <div class="col-6 my-2">
+        <div class="card" style="width: 30rem;">
+          <div class="card-header h4 bg-dark text-light">Summary</div>
+          <div class="card-body">
+            <div id="summary-cost" class="row my-2">
+              <div class="col-8">Cost</div>
+              <div class="col-4">&#8377; 999.99</div>
+            </div>
+            <div id="summary-shipping" class="row my-2">
+              <div class="col-8">Shipping</div>
+              <div class="col-4">&#8377; 0.00</div>
+            </div>
+            <hr>
+            <div id="summary-total" class="row my-2">
+              <div class="col-8 font-weight-bold">Total</div>
+              <div class="col-4 font-weight-bold">&#8377; 999.99</div>
+            </div>
+            <div class="mt-3 text-center">
+              <a class="btn btn-warning">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-dark ">
+  </footer>
+</body>
+
+<script type="module" src="./js/cart.js"></script>
+
+
+</html>

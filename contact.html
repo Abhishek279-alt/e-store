@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | E-Store</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- Favicon Include -->
+  <link rel="icon" type="image/x-icon" href="./favicon_io/favicon.ico">
+  <script src="./js/script.js"></script>
+</head>
+<!-- Dynamically added Header and Footer files -->
+<script>
+  $(function () {
+    $("header").load("./include/header.html");
+    $("footer").load("./include/footer.html")
+  });
+</script>
+
+<body class="primary-color">
+  <header></header>
+
+  <main class="container my-3">
+
+    <div class="row d-flex flex-lg-row flex-md-column flex-sm-column justify-content-center">
+      <!-- Logo Image -->
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column justify-content-center">
+        <img src="./images/logo/logo-2.png" alt="Logo image" style="width: 90%;height:90%;">
+      </div>
+      <!-- Contact Form -->
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="h3 text-center font-weight-bold">Contact</div>
+        <form onsubmit="return false">
+          <div class="form-group">
+            <label for="">Name</label>
+            <input type="email" class="form-control" id="" placeholder="Enter Full Name">
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="" placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="">Message</label>
+            <textarea class="form-control" id="" rows="3" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark btn-block">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark ">
+  </footer>
+</body>
+
+</html>

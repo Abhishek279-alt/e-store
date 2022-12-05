@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | E-Store</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- Favicon Include -->
+  <link rel="icon" type="image/x-icon" href="./favicon_io/favicon.ico">
+
+</head>
+<!-- Dynamically added Header and Footer files -->
+<script>
+  $(function () {
+    $("header").load("./include/header.html");
+    $("footer").load("./include/footer.html")
+  });
+</script>
+
+<body class="primary-color">
+  <header></header>
+
+  <div class="alert alert-success alert-dismissible fade show" role="alert" id="login-success">
+    <strong>Login Successful!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert" id="login-fail">
+    <strong>Login Failed!</strong> Incorrect email or password.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <main class="contianer my-5">
+    <div class="row mb-2">
+      <div class="col-12">
+        <div class="h2 text-center font-weight-bold">Login</div>
+      </div>
+    </div>
+    <div class="row d-flex flex-row justify-content-center">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <form onsubmit="return false">
+          <div class="form-group">
+            <label for="loginEmail">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="btn btn-warning btn-block" onclick="checkLogin()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark mt-5">
+  </footer>
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>
